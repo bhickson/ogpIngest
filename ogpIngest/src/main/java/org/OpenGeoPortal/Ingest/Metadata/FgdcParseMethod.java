@@ -347,7 +347,8 @@ public class FgdcParseMethod extends AbstractXmlMetadataParseMethod implements
 				solrType = GeometryType.Polygon;
 			} else if (sdtsType.equals("Composite")
 						|| sdtsType.contains("omposite")
-						|| sdtsType.equals("Entity point")){
+						|| sdtsType.equals("Entity point")
+						|| sdtsType.equals("Point")){
 				solrType = GeometryType.Point;
 			} else if (sdtsType.equals("String")){
 					solrType = GeometryType.Line;

@@ -2,6 +2,7 @@
 					<h4>Institution (select one)</h4>
 				</label>
 				<select id="institution" name="institution">
+					<option value="UArizona">University of Arizona</option>
 					<option value="Tufts">Tufts</option>
 					<option value="Harvard">Harvard</option>
 					<option value="MIT">MIT</option>
@@ -9,6 +10,7 @@
 					<option value="Berkeley">Berkeley</option>
 					<option value="Maryland">Maryland</option>
 					<option value="Columbia">Columbia</option>
+					<option value="UArizona">University of Arizona</option>
 					<option value="UN">UN</option>
 					<option value="UNWFP">UN WFP</option>
 					<option value="OKGIS">OK GIS</option>
