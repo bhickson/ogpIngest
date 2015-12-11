@@ -216,7 +216,8 @@ public abstract class AbstractSolrIngest implements SolrIngest
 		}
 		
 		private String processWorkspaceName() {
-			return metadata.getWorkspaceName();
+			return "UniversityLibrary";
+			//return metadata.getWorkspaceName();
 		}
 
 		abstract public String processGeoreferenced();
@@ -586,9 +587,13 @@ public abstract class AbstractSolrIngest implements SolrIngest
 			if ((name == null)||(name.isEmpty())){
 				this.solrIngestResponse.addError("Layer Name", "Name", "Layer Name must be specified.", "Layer Name must be specified.");
 			}
-			
-			String layerId = institution + "." + name;
-			return layerId;
+			if ((institution == "UArizona")||(institution == "uArizona")) {
+				String layerId = "10.2458/azu_geo_" + name.toLowerCase();
+				return layerId;
+			} else {
+				String layerId = "10.2458/azu_geo_" + name.toLowerCase();
+				return layerId;
+			}
 		}
 
 		private String processAccess() {
